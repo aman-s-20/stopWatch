@@ -6,8 +6,10 @@ let count = 0;
 let timer = false;
 
 function start() {
-  timer = true;
-  stopWatch();
+  if (timer == false) {
+    timer = true;
+    stopWatch();
+  }
 }
 
 function stop() {
@@ -17,10 +19,10 @@ function stop() {
 function reset() {
   timer = false;
   stopWatch();
-  hr=0;
-  min=0;
-  sec=0;
-  count=0;
+  hr = 0;
+  min = 0;
+  sec = 0;
+  count = 0;
   document.getElementById("hr").innerHTML = "00";
   document.getElementById("min").innerHTML = "00";
   document.getElementById("sec").innerHTML = "00";
